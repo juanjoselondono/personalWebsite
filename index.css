@@ -167,7 +167,7 @@ body{
 }
 @media only screen and (max-width: 600px) {
     body{
-        grid-template-rows: 0.1fr 0.25fr 1fr 1fr 0.25fr;
+        grid-template-rows: 0.1fr 0.15fr 1fr 0.4fr 0.1fr;
     }
     .menu_title{
         font-size: 20px;
@@ -188,13 +188,30 @@ body{
         grid-template-columns: 1fr;
         grid-template-rows:1fr 0.8fr 0.5fr;
     }
+    .projects{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr;
+    }
     .projects_item{
+        align-self: center;
+        justify-self: center;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 0.25fr 0.25fr;
         background-color: rgb(88, 88, 88);
         transition-duration: 50ms;
-        grid-column-gap: 25px;
+        grid-row-gap: 30px;
+        margin-top: 30px;
         outline: solid white 2px;
+        width: 75%;
+    }
+    .projects_title{
+        font-size: 30px;
+    }
+    /*STACK INFO*/
+    .stack_info{
+        height: 50%;
+        margin-bottom:0%;
     }
 }
