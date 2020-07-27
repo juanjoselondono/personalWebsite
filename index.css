@@ -27,8 +27,8 @@ body{
     font-stretch: extra-expanded;
 }
 .menu_items_container{
-    justify-self: center;
     align-self: center;
+    width: 100%;
     list-style: none;
     display: grid;
     grid-template-columns:repeat(4, 1fr);
@@ -176,6 +176,19 @@ body{
     justify-self: center;
     align-self: center;
     text-align: center;
+    justify-content: center;
+}
+.footer-school{
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+}
+a{
+    align-self: center;
+    justify-self: center;
+    color: rgb(93, 204, 255);
+    text-decoration: none;
 }
 @media only screen and (max-width: 600px) {
     body{
