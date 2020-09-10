@@ -112,7 +112,7 @@ body{
 }
 .projects_container{
     display: grid;
-    grid-template-columns: 1fr 0.8fr 0.5fr;
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 50px;
 }
@@ -145,6 +145,7 @@ body{
 }
 .link{
     text-decoration: none;
+    color: aqua;
 }
 .footer{
     display: grid;
@@ -183,13 +184,16 @@ body{
     align-self: center;
     text-align: center;
     justify-content: center;
-}
-a{
     align-self: center;
     justify-self: center;
     color: rgb(93, 204, 255);
     text-decoration: none;
 }
+a{
+    color: white;
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 600px) {
     body{
         grid-template-rows: 0.1fr 0.15fr 0.8fr 0.3fr 0.1fr;

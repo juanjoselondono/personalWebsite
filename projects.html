@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="projects.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <section class="menu">
+        <h1 class="menu_title"><a href="./index.html">JUAN JOSÉ LONDOÑO DAVID</a></h1>
+        <ul class="menu_items_container">
+            <li class="menu_items"><a href="./projects.html">PROJECTS</a></li>
+            <li class="menu_items"><a href="./essays.html">ESSAYS</a></li>
+            <li class="menu_items"><a href="./contact.html">CONTACT</a></li>
+            <li class="menu_items"><a href="./aboutme.html">ABOUT ME</a></li>
+        </ul>
+    </section>
+    <div id="particles-js"></div>
+    <section class="title">
+        <div class="wrapper"><h1>PROYECTOS</h1></div>
+    </section>
+    <section class="projects">
+        <div class="projects_item">
+            <h2 class="project_title" src="./">TRG CAR</h2>
+            <video class="project_video"></video>
+            <p class="project_description">IT`S AN ARDUINO CAR BUILD BY ME</p>
+            <p class="project_code"></p>
+        </div>
+        <div class="projects_item">
+            <h2 class="project_title" src="./">TRG CAR</h2>
+            <video class="project_video"></video>
+            <p class="project_description">IT`S AN ARDUINO CAR BUILD BY ME</p>
+            <p class="project_code"></p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <h4 class="footer_advice">FOLLOW ME ON</h4>
+            <a href="https://github.com/juanjoselondono"><img class="footer_img" src="./images/icons/logo_github.png"></a>
+            <a href="https://twitter.com/londono_da"><img class="footer_img" src="./images/icons/logo_twitter.png"></a>
+            <a href="https://www.instagram.com/juan_londono_d/"><img class="footer_img" src="./images/icons/logo_instagram.png"></a>
+        </div>
+        <p class="footer-cpr">©JUANLONDOÑO 2020</p>
+        <a href= "school.html"class="footer-school"><p>School session projects</p></a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () { console.log("Loaded"); });
+    </script>
+    <script>
+        window.onload = play();
+        document.getElementById('tryAgain').addEventListener('click', () => { play() })
+
+        function play() {
+            var blue = '#2980b9';
+            var l = Snap('#logo');
+            var p = l.select('path');
+            l.clear();
+            l.append(p);
+
+            p.attr({
+                fill: blue,
+                stroke: '#0066CC',
+            });
+
+            setTimeout( function() {
+                // modify this one line below, and see the result !
+                var logoTitle = 'alticreation';
+                var logoRandom = '';
+                var logoTitleContainer = l.text(0, '98%', '');
+                var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+                logoTitleContainer.attr({
+                    fontSize: 280,
+                    fontFamily: 'Dosis',
+                    fontWeight: '600'
+                });
+
+                function generateRandomTitle(i, logoRandom) {
+                    setTimeout( function() {
+                        logoTitleContainer.attr({ text: logoRandom });
+                    }, i*70 );
+                }
+
+                for( var i=0; i < logoTitle.length+1; i++ ) {
+                    logoRandom = logoTitle.substr(0, i);
+                    for( var j=i; j < logoTitle.length; j++ ) { 
+                        logoRandom += possible.charAt(Math.floor(Math.random() * possible.length)); 
+                    }
+                    generateRandomTitle(i, logoRandom);
+                    logoRandom = '';
+                }
+
+            }, 500 );
+
+    }
+    </script>
+</body>
+
+</html>
