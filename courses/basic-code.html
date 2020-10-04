@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="basic-code.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <header class="menu">
+        <h1 class="menu_title"><a>JUAN JOSÉ LONDOÑO DAVID</a></h1>
+    </header>
+    <section class="project-container">
+        <h2 class="project-title">Inscribete al curso</h2>
+        <img src= "../images/dinosaur.jpg" class="project-image">
+        <p class="project-text">Curso de programación básica ¡recreemos juntos el Juego del dinosaurio! Fecha: Octubre 6 2020</p>
+    </section>
+    <section class="formulary">
+        <div class="formulary_form" id ="contact-form">
+            <input type="text" type="email" placeholder="Ingresa tu correo" class="input_text" id="user_email">
+            <input type ="text" type="text" placeholder="Ingresa tu nombre completo" class="input_text" id="user_name">
+            <button class="button" onclick="send()" id="Send">Registrarme ya!</button>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_container">
+            <h4 class="footer_advice">FOLLOW ME ON</h4>
+            <a href="https://github.com/juanjoselondono"><img class="footer_img" src="../images/icons/logo_github.png"></a>
+            <a href="https://twitter.com/londono_da"><img class="footer_img" src="../images/icons/logo_twitter.png"></a>
+            <a href="https://www.instagram.com/juan_londono_d/"><img class="footer_img" src="../images/icons/logo_instagram.png"></a>
+        </div>
+        <p class="footer-cpr">©JUANLONDOÑO 2020</p>
+    </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script>
+
+        function send(){
+            var email = document.getElementById("user_email").value;
+            var contenido = document.getElementById("user_name").value;
+
+            function validateEmail(email) {
+                const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(email);
+            }
+            var emailToken = validateEmail(email)
+            
+            if(emailToken == true && contenido != ""){
+                Email.send({
+                SecureToken : "eb4409fb-43ec-45b4-9536-0cf28acff790",
+                To : 'juanjoselondonodavid@gmail.com',
+                From : "jjlondonoda@corazonistamedellin.edu.co",
+                Subject:'JS CLASS',
+                Body : `email: ${email}  ${contenido}`
+                }).then(
+                message => alert("message sent"),
+                    window.open("./thankyou.html")
+                );
+            }
+            else{
+                Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Faltan carácteres!',
+                footer: '<a href>Why do I have this issue?</a>'
+                })
+            }
+            var email = document.getElementById("formulario_email_input");
+            var contenido = document.getElementById("formulario_content_input");
+        }
+    </script>
+</body>
+
+</script>
+</html>

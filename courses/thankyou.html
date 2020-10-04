@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Thank you!</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr;
+    }
+    .title{
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        color: white;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 6em;
+    }
+    .image{
+        align-self: center;
+        justify-self: center;
+        filter: contrast(-5%);
+        filter: brightness(2);
+        animation-name: jump;
+        animation-duration: 4s;
+    }
+
+@keyframes jump {
+    0% { transform: translate(0%, 0%) scale(1.25, 0.75); }
+    50% { transform: translate(-50%, -50%) scale(1, 1); }
+    55% { transform: translate(-25%, -50%) rotate(15deg); }
+    60% { transform: translate(-50%, -50%) rotate(-15deg); }
+    65% { transform: translate(-50%, -50%) rotate(15deg); }
+    70% { transform: translate(-50%, -50%) rotate(-15deg); }
+    100% { transform: translate(-0%, -0%) ; }
+}
+</style>
+<body>
+    <h1 class="title">Gracias por asistir. te espero!🤘</h1>
+    <img class="image"src="https://miro.medium.com/max/300/0*9U_PkckAUtKGrb_R.png">
+</body>
+</html>
