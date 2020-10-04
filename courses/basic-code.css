@@ -57,6 +57,8 @@ body{
     align-self: center;
     justify-self: center;
     border-radius: 10px;
+    text-align: center;
+    font-size: 1.5em;
 }
 input[type=text], textarea {
     -webkit-transition: all 0.30s ease-in-out;
@@ -173,65 +175,13 @@ a{
 }
 
 @media only screen and (max-width: 600px) {
-    body{
-        grid-template-rows: 0.1fr 0.15fr 0.8fr 0.3fr 0.1fr;
+    .button{
+        font-size: 3em;
+        text-align: center;
+        width: 80%;
     }
-    .menu_title{
-        font-size: 30px;
-    }
-    .menu_items{
-        font-size: 25px;
-        align-content: center;
-    }
-    /*INFO*/
-    .info_text{
-        font-size: 30px;
-    }
-    .principal_info{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .projects_container{
-        grid-template-columns: 1fr;
-        grid-template-rows:1fr 0.8fr 0.5fr;
-    }
-    .projects{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.05fr 1fr;
-    }
-    .projects_item{
-        align-self: center;
-        justify-self: center;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 0.25fr 0.25fr;
-        background-color: rgb(32, 32, 32);
-        border-radius: 25px;
-        transition-duration: 50ms;
-        grid-row-gap: 30px;
-        margin-top: 30px;
-        width: 75%;
-    }
-    .projects_title{
-        font-size: 30px;
-    }
-    .projects_item_img{
-        height: 50vh;
-    }
-    /*STACK INFO*/
-    .stack_info{
-        height: 50%;
-        margin-bottom:0%;
-        height: 85%;
-    }
-    /*FOOTER*/
-    .footer_img{
-        width: 50px;
-        height: 50px;
-    }
-    .footer_advice{
-        font-size: 30px;
+    .project-image{
+        height: 100%;
+        width: 100%;
     }
 }
