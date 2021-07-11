@@ -3,14 +3,13 @@ body{
     font-family: 'Bebas Neue', cursive;
     color: white;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 0.5fr 1.2fr 1fr 0.25fr;
+    grid-template-rows: 0.25fr 0.5fr 1.2fr auto auto;
     margin: 0px 0px 0px 0px;
 }
 #particles-js{
     background-color: black;
     height: 300px;
-    width: 100%;
+    width:auto;
 }
 .menu{
     width: 100%;
@@ -31,7 +30,7 @@ body{
     width: 100%;
     list-style: none;
     display: grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(3, 1fr);
     grid-template-rows: 1fr;
     text-align: center;
     padding-left: 0px;
@@ -61,6 +60,7 @@ body{
     align-self: center;
     justify-self: center;
     border-radius: 25px;
+    object-fit: cover;
 }
 .info_text{
     justify-self: center;
@@ -70,8 +70,8 @@ body{
 }
 /*TECH STACK*/
 .stack_info{
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 1fr;
@@ -79,8 +79,8 @@ body{
     justify-self: center;
     border: 1px solid white;
     border-radius: 25px;
-    width: 80%;
-    height: 70%;
+    width: 100vh;
+    height: 100vh;
 }
 .stack_info:hover{
     -webkit-box-shadow: 0px 2px 5px 5px rgba(255,255,255,1);
@@ -113,7 +113,7 @@ body{
 .projects_container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1fr;
+    grid-auto-rows: max-content;
     grid-column-gap: 50px;
 }
 .projects_item{
@@ -121,16 +121,20 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.25fr 0.25fr;
     background-color: rgb(24, 24, 24);
-    transition-duration: 50ms;
+    transition-duration:60ms;
+    margin: 5%;
+    border-radius: 20px;
 }
 .projects_item_description{
     justify-self: center;
     text-align: center;
     align-self: flex-start;
-    font-size: 30px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin: 5%;
 }
 .projects_item_title{
-    font-size: 50px;
+    font-size: 40px;
     justify-self: center;
     align-self: center;
     text-align: center;
@@ -138,10 +142,13 @@ body{
 .projects_item:hover{
     transform: scale(1.051);
     cursor: pointer;
+    -webkit-box-shadow: 2px 5px 17px 1px #FFFFFF; 
+box-shadow: 2px 5px 17px 1px #FFFFFF;
 }
 .projects_item_img{
     width: 100%;
-    height: 80vh;
+    height: 80%;
+    object-fit: cover;
 }
 .link{
     text-decoration: none;
@@ -194,12 +201,19 @@ a{
     text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     body{
-        grid-template-rows: 0.1fr 0.15fr 0.8fr 0.3fr 0.1fr;
+        grid-template-rows: auto auto auto auto auto;
+    }
+    .menu{
+        align-self: center;
+        justify-self: center;
+        width: 100%;
     }
     .menu_title{
         font-size: 30px;
+        justify-self: center;
+        justify-content: center;
     }
     .menu_items{
         font-size: 25px;
@@ -221,7 +235,6 @@ a{
     .projects{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 0.05fr 1fr;
     }
     .projects_item{
         align-self: center;
@@ -240,13 +253,14 @@ a{
         font-size: 30px;
     }
     .projects_item_img{
-        height: 50vh;
+        height: 100%;
     }
     /*STACK INFO*/
     .stack_info{
-        height: 50%;
+        height: 40%;
         margin-bottom:0%;
         height: 85%;
+        border: none;
     }
     /*FOOTER*/
     .footer_img{
