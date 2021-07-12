@@ -8,6 +8,11 @@ body{
     margin: 0px 0px 0px 0px;
     background-color: black !important;
 }
+.navbar-nav{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-around;
+}
 #particles-js canvas {
     display: block;
     vertical-align: bottom;
@@ -213,6 +218,10 @@ a{
         height: 100%;
         justify-self: center;
         background-color: transparent;
+        border: none;
+        border-bottom: solid white 2px;
+        border-top: solid white 2px;
+
     }
     .projects_item:hover{
         transform: scale(1);
@@ -229,6 +238,7 @@ a{
     }
     .projects_item_img{
         height: 50vh;
+        width: 50vh;
         object-fit: cover;
     }
     .title-text{

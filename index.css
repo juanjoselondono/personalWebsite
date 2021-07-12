@@ -3,9 +3,7 @@ body{
     font-family: 'Bebas Neue', cursive !important;
     color: white !important;
     display: grid !important;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto;
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     background-color: black !important;
 }
 .navbar-nav{
@@ -30,43 +28,6 @@ body{
     z-index: -10;
     top: 0;
     left: 0
-}
-.menu{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    justify-content: center;
-    position: absolute;
-}
-.menu_title{
-    align-self: center;
-    justify-self: center;
-    font-size: 40px;
-    font-stretch: extra-expanded;
-}
-.menu_items_container{
-    align-self: center;
-    width: 100%;
-    list-style: none;
-    display: grid;
-    grid-template-columns:repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    text-align: center;
-    padding-left: 0px;
-    font-size: 40px;
-}
-.menu_items:hover{
-    border-bottom: solid 2px white;
-    cursor: pointer;
-}
-.menu_items{
-    justify-self: center;
-    align-self: center;
-    text-align: center;
-    transition-duration: 50ms;
-    margin: 0px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
 }
 /*INFO*/
 .principal_info{
@@ -100,8 +61,6 @@ body{
     justify-self: center;
     border: 1px solid white;
     border-radius: 25px;
-    width: 100vh;
-    height: 100vh;
 }
 .stack_info:hover{
     -webkit-box-shadow: 0px 2px 5px 5px rgba(255,255,255,1);
@@ -223,31 +182,16 @@ a{
     text-decoration: none;
 }
 
-@media only screen and (max-width: 800px) {
-    body{
-        grid-template-rows: auto auto auto auto auto;
-    }
-    .menu{
-        width: 180%;
-    }
-    .menu_title{
-        font-size: 30px;
-        justify-self: center;
-        justify-content: center;
-    }
-    .menu_items{
-        font-size: 25px;
-        align-content: center;
-    }
-    /*INFO*/
+@media only screen and (max-width: 600px) {
     .info_text{
-        font-size: 30px;
+        font-size: 20px;
+        margin:5%
     }
     .principal_info{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
-        margin-bottom: -40%;
+        margin-bottom: -60%;
     }
     .projects_container{
         grid-template-columns: 1fr;
@@ -274,6 +218,7 @@ a{
         margin-top: 0%;
         font-size: 35px;
         margin-bottom: -300px;
+        text-align: center;
     }
     .projects_item_img{
         height: 50vh;
@@ -285,7 +230,6 @@ a{
         margin-top:10%;
         height: 85%;
         border: none;
-
     }
     /*FOOTER*/
     .footer_img{
