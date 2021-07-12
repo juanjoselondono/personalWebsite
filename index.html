@@ -8,28 +8,44 @@
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <title>HOME</title>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-
+<div id="particles-js"></div>
 <body>
-    <section class="menu">
-        <h1 class="menu_title"><a>JUAN JOSÉ LONDOÑO DAVID</a></h1>
-        <ul class="menu_items_container">
-            <li class="menu_items"><a href="./projects">PROJECTS</a></li>
-            <li class="menu_items"><a href="./essays.html">BLOG</a></li>
-            <li class="menu_items"><a href="./contact.html">MUSIC</a></li>
-        </ul>
-    </section>
-    <div id="particles-js"></div>
-    <section class="principal_info" data-aos="fade-down">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="height: 30vh; font-size: 1.5em; width: 100%;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Juan José Londoño D</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./projects/index.html">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./projects/index.html">Music</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <section class="principal_info">
         <p class="info_text">I'm a colombian Maker and Hobbyist Musician who loves to share Ideas with others. <a class = "link"href="https://api.whatsapp.com/send/?phone=%2B573054293966&text=Hi%20I%27m%20interested%20on%20building%20a%20project%20and%20collaborate%20with%20you">Send me a message</a> if you want to build a project with me. </p>
         <img class="info_image" src="./assets/images/profile.jpg">
     </section>
-    <section class="projects" data-aos="zoom-in-up">
-        <h2 class="projects_title">Take A Look in some of my projects</h2>
+    <section class="projects">
+        <h2 class="projects_title">Take A Look of some of the things that I do</h2>
         <div class="projects_container">
             <div class="projects_item">
                 <img class="projects_item_img" src="./assets/projects-images/PLANE_CONCEPTS/Boatv1.png">
@@ -60,7 +76,7 @@
             </div>
             <div class="projects_item">
                 <img class="projects_item_img" src="./assets/projects-images/NO_PUEDO_PENSAR/cover.jpg">
-                <h3 class="projects_item_title">"No sé como Pensar"</h3>
+                <h3 class="projects_item_title">"No puedo Pensar"</h3>
                 <p class="projects_item_description">Instrumental Electro/punk/progressive/Rock song</p>
             </div>
         </div>
@@ -94,6 +110,8 @@
     <script>
         particlesJS.load('particles-js', 'particles.json', function () { console.log("Loaded"); });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
